@@ -1,0 +1,58 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 24px;
+    width: 300px;
+    text-align: left;
+}
+
+form input, select, textarea {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.button-container button {
+    padding: 12px;
+    border-radius: 8px;
+    width: 300px;
+    border: none;
+    background-color: #fd2020;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #e61c1c;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-container button:focus {
+    outline: 2px solid #a30000;
+    outline-offset: 2px;
+}
+
+.button-container button:active {
+    background-color: #c91717;
+    transform: translateY(1px);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
