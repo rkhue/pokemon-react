@@ -1,10 +1,12 @@
 import './App.css'
+import Form from './components/FormComponent'
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Limpo</h1>
+      <div className='app'>
+        <h1>Formulário Pokemon</h1>
+        <Form />
       </div>
     </>
   )
