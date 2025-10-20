@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import './FormComponent.css'
-import pokemonData from '../data/pokemonData'
 
-const Form = () => {
+const Form = ({ onAddPokemon }) => {
   const [pokemonName, setPokemonName] = useState('')
-  const [pokemonType, setPokemonType] = useState('')
+  const [pokemonType, setPokemonType] = useState('normal')
   const [pokemonInfo, setPokemonInfo] = useState('')
   const [pokemonPower, setPokemonPower] = useState('')
 
@@ -14,14 +13,15 @@ const Form = () => {
       name: pokemonName,
       type: pokemonType,
       info: pokemonInfo,
-      power: pokemonPower
+      power: pokemonPower === '' ? 0 : Number(pokemonPower)
     }
     console.log('Dados enviados: ', pokemon)
     alert('Pokémon enviado com sucesso!')
-
-    pokemonData.push(pokemon)
-
-    console.log(pokemonData)
+    if (typeof onAddPokemon === 'function') {
+      onAddPokemon(pokemon)
+    } else {
+      console.warn('onAddPokemon not provided — pokemon not added to store')
+    }
   }
 
   const handleReset = (event) => {

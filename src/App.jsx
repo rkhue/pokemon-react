@@ -1,15 +1,23 @@
 import './App.css'
+import React, { useState } from 'react'
 import Form from './components/FormComponent'
 import PokemonList from './components/PokemonList'
-import pokemonData from './data/pokemonData'
+import { getPokemonData, addPokemon as addPokemonToStore } from './data/pokemonData'
 
 function App() {
+  const [pokemons, setPokemons] = useState(() => getPokemonData().slice())
+
+  const addPokemon = (pokemon) => {
+    addPokemonToStore(pokemon)
+    setPokemons((prev) => [...prev, pokemon])
+  }
+
   return (
     <>
       <div className='app'>
         <h1>Formulário Pokemon</h1>
-        <Form />
-        <PokemonList pokemonData={pokemonData} />
+        <Form onAddPokemon={addPokemon} />
+        <PokemonList pokemonData={pokemons} />
       </div>
     </>
   )
