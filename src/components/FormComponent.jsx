@@ -19,8 +19,16 @@ const Form = () => {
     alert('Pokémon enviado com sucesso!')
   }
 
+  const handleReset = (event) => {
+    event.preventDefault()
+    setPokemonName('')
+    setPokemonType('')
+    setPokemonInfo('')
+    setPokemonPower('')
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} onReset={handleReset}>
         <label htmlFor="pokemonName">Nome do Pokémon:</label>
         <input type="text" id="pokemonName" name="pokemonName" value={pokemonName} onChange={(e) => setPokemonName(e.target.value)} />
         <label htmlFor='pokemonType'>Tipo do Pokemon</label>
