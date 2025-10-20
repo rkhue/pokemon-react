@@ -44,6 +44,10 @@ const Form = () => {
             <option value='bug'>Inseto</option>
             <option value='normal'>Normal</option>
             <option value='poison'>Veneno</option>
+            <option value='electric'>Eletrico</option>
+            <option value='psychic'>Psiquico</option>
+            <option value='rock'>Pedra</option>
+            <option value='ground'>Terra</option>
         </select>
         <label htmlFor='pokemonInfo'>Descrição</label>
         <textarea id='pokemonInfo' name='pokemonInfo' value={pokemonInfo} onChange={(e) => setPokemonInfo(e.target.value)} />
