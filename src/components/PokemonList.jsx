@@ -1,3 +1,6 @@
+import PokemonCard from "./PokemonCard";
+
+
 const PokemonList = ({ pokemonData }) => {
     return (
         <div>
