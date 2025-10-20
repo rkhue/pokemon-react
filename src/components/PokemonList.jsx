@@ -3,7 +3,7 @@ import './PokemonList.css';
 
 const PokemonList = ({ pokemonData }) => {
     return (
-        <div>
+        <div className="pokemon-list-container">
             <h1>Lista de Pokémons</h1>
 
             <div className="pokemon-list">

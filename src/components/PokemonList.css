@@ -5,3 +5,9 @@
     justify-content: center;
     margin-top: 24px;
 }
+
+.pokemon-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
