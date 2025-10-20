@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './FormComponent.css'
+import pokemonData from '../data/pokemonData'
 
 const Form = () => {
   const [pokemonName, setPokemonName] = useState('')
@@ -9,14 +10,18 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    const formData = {
+    const pokemon = {
       name: pokemonName,
       type: pokemonType,
       info: pokemonInfo,
       power: pokemonPower
     }
-    console.log('Form Data Submitted: ', formData)
+    console.log('Dados enviados: ', pokemon)
     alert('Pokémon enviado com sucesso!')
+
+    pokemonData.push(pokemon)
+
+    console.log(pokemonData)
   }
 
   const handleReset = (event) => {
