@@ -1,6 +1,6 @@
 .pokemon-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 16px;
     justify-content: center;
     margin-top: 24px;
