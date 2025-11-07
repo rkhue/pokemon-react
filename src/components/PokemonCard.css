@@ -1,0 +1,30 @@
+.pokemon-card {
+    border: 1px solid #ee7676;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.pokemon-card h2 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    color: #0f0f0f;
+}
+
+.pokemon-card p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #1b1b1b;
+}
+
+.pokemon-card .power {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+.pokemon-card .info::before {
+    content: "ℹ️ ";
+}
